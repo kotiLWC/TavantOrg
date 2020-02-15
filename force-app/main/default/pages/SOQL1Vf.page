@@ -1,0 +1,18 @@
+<apex:page controller="SOQL1">
+    <apex:form >
+    <apex:pageBlock >
+        <apex:pageBlockSection >
+            <apex:inputText value="{!find}"/>
+        </apex:pageBlockSection>
+        <apex:commandButton action="{!fetchAccs}" value="getAccounts"/>
+        <apex:pageBlockSection >
+        <apex:pageBlockTable value="{!lstAcc}" var="a">
+             <apex:column value="{!a.name}" headervalue="Name"/>        
+            <apex:column value="{!a.phone}" headervalue="phone"/>      
+            <apex:column value="{!a.industry}" headervalue="industry"/>   
+            <apex:column value="{!a.rating}" headervalue="rating"/>   
+        </apex:pageBlockTable>
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,8 @@
+<aura:component controller="ContactController">
+    <aura:attribute name="contact" type="Contact" 
+                    default="{ 'sobjectType': 'Contact' }"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <force:inputField value="{!v.contact.Name}"/>
+    <force:outputField value="{!v.contact.Name}"/>
+    
+</aura:component>

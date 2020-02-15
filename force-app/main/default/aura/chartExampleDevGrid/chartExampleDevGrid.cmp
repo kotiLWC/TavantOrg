@@ -1,0 +1,13 @@
+<aura:component controller="AgricultureProducts">
+<ltng:require scripts='/resource/JOGrid/pagtable/jquery.min.js,/resource/JOGrid/pagtable/jszip.min.js,/resource/JOGrid/pagtable/dx.all.js'
+styles='/resource/JOGrid/pagtable/dx.common.css,/resource/JOGrid/pagtable/dx.carmine.css,/resource/JOGrid/pagtable/dx.softblue.css'
+afterScriptsLoaded="{!c.scriptsLoaded}" /> 
+<aura:attribute name="productList" type="Agr_Product__c[]"/>
+
+ <div class="demo-container">
+        <div id="pivotgrid-demo">
+            <div id="pivotgrid-chart"></div>
+            <div id="pivotgrid"></div>
+        </div>
+    </div>
+</aura:component>

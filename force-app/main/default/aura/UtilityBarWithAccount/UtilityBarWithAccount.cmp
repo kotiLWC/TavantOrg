@@ -1,0 +1,42 @@
+<aura:component controller= "AccountCreateEditDelete_Controller" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+	<aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:attribute name="accountList" type="Account[]"/>
+    <table  role="grid" class="slds-table slds-table_fixed-layout slds-table_bordered slds-scrollable_none">
+                <thead>
+                    <tr class="slds-text-title_caps">
+                        <th scope="col">
+                            <div class="slds-truncate" title="Account Name">Account Name</div>
+                        </th>
+                        <th scope="col">
+                            <div class="slds-truncate" title="Phone">Phone</div>
+                        </th>
+                        <th scope="col">
+                            <div class="slds-truncate" title="Rating">Rating</div>
+                        </th>
+                        <th scope="col">
+                            <div class="slds-truncate" title="Industry">Industry</div>
+                        </th>
+                    </tr>
+                </thead>
+                <aura:iteration var="acc" items="{!v.accountList}" indexVar="indx">
+                    <tbody>
+                        <tr>
+                          
+                            <td data-label="Account Name">
+                                <div class="slds-truncate" title="Name">{!acc.Name}</div>
+                            </td>
+                            <td data-label="Phone">
+                                <div class="slds-truncate" title="Phone">{!acc.Phone}</div>
+                            </td>
+                            <td data-label="Rating">
+                                <div class="slds-truncate" title="Rating">{!acc.Rating}</div>
+                            </td>
+                            <td data-label="Industry">
+                                <div class="slds-truncate" title="Industry">{!acc.Industry}</div>
+                            </td>
+                           
+                        </tr>
+                    </tbody>
+                </aura:iteration>
+            </table>
+</aura:component>

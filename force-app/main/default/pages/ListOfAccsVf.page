@@ -1,0 +1,11 @@
+<apex:page controller="ListOfAccs" >
+    <apex:form >
+    <apex:pageBlock >
+        <apex:pageBlockTable var="lst" value="{!lstAcc}">
+        	<apex:column value="{!lst.Name}"/>
+            <apex:column value="{!lst.Rating}"/>
+            <apex:column value="{!lst.Industry}"/>
+        </apex:pageBlockTable>
+     </apex:pageBlock>
+    </apex:form>
+</apex:page>

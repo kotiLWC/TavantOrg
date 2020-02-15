@@ -1,0 +1,20 @@
+<apex:page controller="AccountDisplatRecCls" extensions="AccountDisplatRecClsExtn">
+    <apex:form >
+        <apex:pageBlock title="Account records">
+            <apex:pageblockTable value="{!Accounts}" var="acc">
+                <apex:column value="{!acc.Name}"/>
+                <apex:column value="{!acc.rating}"/>
+                <apex:column value="{!acc.phone}"/>
+            </apex:pageblockTable>
+        </apex:pageBlock>
+        
+        <apex:pageblock title="Contacts Details">
+            <apex:pageblockTable value="{!contList }" var="con">
+                <apex:column value="{!con.FirstName}"/>
+                <apex:column value="{!con.LastName}"/>
+                <apex:column value="{!con.Email}"/>
+            </apex:pageblockTable>
+        </apex:pageblock> 
+        
+    </apex:form>
+</apex:page>

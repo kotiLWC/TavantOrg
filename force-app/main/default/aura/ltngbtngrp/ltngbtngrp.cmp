@@ -1,0 +1,7 @@
+<aura:component >
+    <lightning:buttonGroup >
+        <lightning:button label="Refresh" onclick="{!c.handleClick}"/>
+        <lightning:button label="Edit" onclick="{!c.handleClick}"/>
+        <lightning:button label="Save" onclick="{!c.handleClick}"/>
+    </lightning:buttonGroup>
+</aura:component>

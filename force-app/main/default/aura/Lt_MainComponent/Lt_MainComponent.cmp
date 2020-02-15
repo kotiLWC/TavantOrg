@@ -1,0 +1,15 @@
+<aura:component >
+     <lightning:card title="User Datatable">
+    <lightning:tabset selectedTabId="two">
+        <lightning:tab label="Create User" id="one">
+            	<c:Lt_CreateAccount/>
+        </lightning:tab>
+        <lightning:tab label="Edit User" id="two">
+                 <c:Lt_GetAccountsAnDInlineEdit/>
+        </lightning:tab>
+        <lightning:tab label="Delete User" id="three">
+                 <c:Lt_DeleteAccount/>
+        </lightning:tab> 
+    </lightning:tabset>
+    </lightning:card>
+</aura:component>

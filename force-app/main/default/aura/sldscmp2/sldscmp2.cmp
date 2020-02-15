@@ -1,0 +1,13 @@
+<aura:component >
+  <!-- lightning:card example using slds-card__body_inner -->
+<lightning:card >
+    <aura:set attribute="title">My Account</aura:set>
+    <aura:set attribute="footer">Footer</aura:set>
+    <aura:set attribute="actions">
+      <lightning:button label="New"/>
+    </aura:set>
+    <div class="slds-card__body_inner">
+      Card Body
+    </div>
+</lightning:card>
+</aura:component>

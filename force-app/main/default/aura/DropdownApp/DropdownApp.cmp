@@ -1,0 +1,11 @@
+<aura:component >
+    <aura:attribute name="status" type="String" default="open"/>
+    <aura:handler name="change" value="{!v.status}" action="{!c.handleChange}"/>
+    <lightning:select aura:id="select" name="select" label="Opportunity Status" value="{!v.status}">
+        <option value="">Select Dashboard</option>
+        <option value="JO_Dashboard">JO Dashboard</option>
+        <option value="Permit_DashBoard">Permit DashBoard</option>
+        <option value="Pavment_DashBoard">Pavment DashBoard</option>
+    </lightning:select>
+   <!-- <lightning:button name="selectChange" label="Change" onclick="{!c.changeSelect}"/>-->
+</aura:component>

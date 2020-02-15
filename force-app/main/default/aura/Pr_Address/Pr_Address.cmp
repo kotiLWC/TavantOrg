@@ -1,0 +1,11 @@
+<aura:component>
+    <lightning:formattedAddress
+        street="16th cross"
+        city="Bangalore"
+        country="India"
+        province="IN"
+        postalCode="560078"
+        latitude="12.906920"
+        longitude="77.596600"                        
+    />
+</aura:component>

@@ -1,0 +1,3 @@
+<aura:component>
+    <lightning:formattedDateTime value="1470174029742" />
+</aura:component>

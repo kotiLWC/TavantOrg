@@ -1,0 +1,19 @@
+<apex:page controller="MultipleObj" >
+    <apex:form >
+        <apex:commandButton action="{!createObjs}" value="Craete"/>
+        <apex:pageBlock title="Multiple Objects">
+            <apex:pageBlockSection title="Account">
+                <apex:inputField value="{!acc.Name}"/>
+            </apex:pageBlockSection>
+            <apex:pageBlockSection title="Contact">
+                <apex:inputField value="{!Con.LastName}"/>
+                <apex:inputField value="{!acc.Phone}"/>
+            </apex:pageBlockSection>
+            <apex:pageBlockSection title="opportunity">
+                 <apex:inputField value="{!Opty.name}"/>
+                <apex:inputField value="{!Opty.closeDate}"/>
+                 <apex:inputField value="{!Opty.stagename}"/>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,6 @@
+<apex:page controller="Apex1">
+    Name:{!name}
+    Branch:{!branch}
+    City:{!city}
+ 
+</apex:page>

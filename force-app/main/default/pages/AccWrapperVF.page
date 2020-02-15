@@ -1,0 +1,20 @@
+<apex:page controller="AccWrapper">
+    <apex:form >
+        <apex:pageBlock >
+            Name <apex:inputtext value="{!name}"/><br/>   
+            Industry<apex:inputtext value="{!industry}"/><br/>   
+            <apex:commandButton value="ADD" action="{!add}" />    
+            <apex:commandButton value="Edit" action="{!edit}" />   
+            <apex:commandButton value="save" action="{!save}" />  
+            <apex:commandButton value="delete" action="{!del}" /> 
+        </apex:pageBlock>
+         <apex:pageBlock >
+           <apex:pageBlockTable value="{!lws}" var="w">
+                        <apex:column ><apex:inputCheckbox value="{!w.chckBx}"/> 
+                        </apex:column>
+                        <apex:column value="{!w.acc.name}"/>
+                        <apex:column value="{!w.acc.industry}"/>
+                    </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

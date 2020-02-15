@@ -1,0 +1,4 @@
+<aura:component >
+  <ui:inputTextArea aura:id="textarea" value="My text area" label="Type something"
+  	    	blur="{!c.handleBlur}" />
+</aura:component>

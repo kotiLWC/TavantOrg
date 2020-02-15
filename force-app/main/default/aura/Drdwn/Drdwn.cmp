@@ -1,0 +1,14 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <div class="slds-button-group" role="group">
+        <div class="slds-dropdown-trigger slds-button--last">
+            <lightning:icon iconName="utility:anchor" size="small" alternativeText="Indicates approval"/>
+            <span class="slds-assistive-text">More Actions</span>
+            <div class="slds-dropdown slds-dropdown--left slds-text-heading--label slds-dropdown--menu">
+                <lightning:menuItem label="JO Dashboard" value="JO Dashboard" aura:id="mySelect" onfocus="{!c.updateTriggerLabel}"/>
+                <lightning:menuItem label="Permitting Dashboard" value="Permitting Dashboard" aura:id="mySelect" onfocus="{!c.updateTriggerLabel}"/>
+                <lightning:menuItem label="Paving Dashboard" value="Paving Dashboard" aura:id="mySelect" onfocus="{!c.updateTriggerLabel}"/>
+                
+            </div>
+        </div>
+    </div>
+</aura:component>

@@ -1,0 +1,6 @@
+<aura:component >
+    <lightning:buttonMenu onselect="{! c.handleMenuSelect }" aura:id="selectItem">
+        <lightning:menuItem label="JO Dashboard" value="JO Dashboard"/>
+        <lightning:menuItem label="Permit Dashboard" value="Permit Dashboard"/>
+        <lightning:menuItem label="Paving dashboard" value="Paving dashboard"/>
+    </lightning:buttonMenu></aura:component>

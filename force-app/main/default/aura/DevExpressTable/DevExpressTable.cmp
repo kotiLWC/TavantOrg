@@ -1,0 +1,16 @@
+<aura:component controller= "AccountCreateEditDelete_Controller" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+<ltng:require scripts='/resource/JOGrid/pagtable/jquery.min.js,/resource/JOGrid/pagtable/jszip.min.js,/resource/JOGrid/pagtable/dx.all.js'
+styles='/resource/JOGrid/pagtable/dx.common.css,/resource/JOGrid/pagtable/dx.carmine.css,/resource/JOGrid/pagtable/dx.softblue.css'
+afterScriptsLoaded="{!c.scriptsLoaded}" />  
+
+<aura:attribute name="accountList" type="Account[]"/>
+<div class="demo-container">
+        <div id="gridContainer"></div>
+        <div class="options">
+            <div class="caption">Options</div>
+            <div class="option">
+                <div id="positionSorting"></div>
+            </div>
+        </div>
+    </div>
+</aura:component>

@@ -1,0 +1,8 @@
+<aura:component controller="ManageAccountController"  implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:attribute name="mydata" type="Object"/>
+    <aura:attribute name="mycolumns" type="List"/>
+    
+    <aura:handler name="init" value="{! this }" action="{! c.init }"/>
+    <h3>Accounts (With Sharing Applied)</h3>
+    <lightning:datatable data="{! v.mydata }" columns="{! v.mycolumns }" keyField="Id" hideCheckboxColumn="true"/>
+</aura:component>

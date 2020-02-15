@@ -1,0 +1,3 @@
+<aura:component >
+  <ui:outputDateTime value="2013-10-07T00:17:08.997Z"  timezone="Europe/Berlin" />
+</aura:component>

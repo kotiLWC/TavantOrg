@@ -1,0 +1,20 @@
+<aura:component controller="DevExpressAccountController" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+	<ltng:require scripts='/resource/JOGrid/pagtable/jquery.min.js,/resource/JOGrid/pagtable/jszip.min.js,/resource/JOGrid/pagtable/dx.all.js'
+                  styles='/resource/JOGrid/pagtable/dx.common.css,/resource/JOGrid/pagtable/dx.carmine.css,/resource/JOGrid/pagtable/dx.softblue.css'
+                  afterScriptsLoaded="{!c.scriptsLoaded}" />
+    
+    <aura:attribute name="ListOfAccounts" type="Account[]"/>
+     <div class="right-side">
+            <div id="selectStatus"></div>
+        </div>
+    <div class="filter-container">
+            <div id="filterBuilder"></div>
+            <div id="apply"></div>
+            <div class="dx-clearfix"></div>
+        </div>
+    <div class="demo-container">
+        <div id="gridContainer4"></div>
+    </div>
+    
+    
+</aura:component>

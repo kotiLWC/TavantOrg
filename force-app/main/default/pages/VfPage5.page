@@ -1,0 +1,13 @@
+<apex:page controller="Apex5">
+    <apex:messages />
+    <apex:form >
+    <apex:pageBlock title="Salary">
+        Enter experience ::<apex:inputText value="{!exp}"/>
+        <apex:pageBlockSection >
+            Salary  <apex:outputText value="{!sal}"></apex:outputText><br/> 
+          Bonus   <apex:outputText value="{!bonus}"></apex:outputText> 
+        </apex:pageBlockSection>
+         <apex:commandbutton value="callApex" action="{!callApex}"></apex:commandbutton> 
+    </apex:pageBlock>
+    </apex:form>
+</apex:page>

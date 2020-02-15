@@ -1,0 +1,8 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+	<lightning:select name="selectApplication" label="Select an item" onchange="{!c.doSomething}">
+        <option value="">choose one...</option>
+        <option value="1">JO_Dashboard</option>
+        <option value="2">Permit_Dashboard</option>
+    </lightning:select>
+
+</aura:component>

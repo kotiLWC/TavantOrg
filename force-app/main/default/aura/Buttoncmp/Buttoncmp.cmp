@@ -1,0 +1,14 @@
+<aura:component >
+  <lightning:button label="Search" onclick="{!c.doSomething}"/>
+
+  <lightning:button label="Download" iconName="utility:download" onclick="{!c.doSomething}"/>
+
+  <lightning:buttonIcon iconName="utility:settings" alternativeText="Settings" onclick="{!c.doSomething}"/>
+
+
+  !-- Good: using span/assistiveText to hide the label visually, but show it to screen readers -->
+  <button>
+      ::before
+      <span class="slds-assistive-text">Settings</span>
+  </button>
+</aura:component>

@@ -1,0 +1,24 @@
+<apex:page controller="WrapperWithCRUD" >
+    <apex:form >
+        <apex:pageBlock title="Create">
+            <apex:pageBlockSection title="Create Record">
+                Name:::<apex:inputText value="{!Name}"/>
+                Age:::<apex:inputText value="{!Age}"/>
+                <apex:commandButton action="{!create}" value="Create"/>
+               	<apex:commandButton action="{!SaveEdit}" value="SaveEdit"/>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+        <apex:pageBlock title="Delete or Edit ">
+            <apex:pageBlockTable value="{!lwd}" var="a">
+                <apex:column >     
+                    <apex:inputCheckbox value="{!a.wSelectBox}"/>
+                </apex:column>
+                <apex:column headerValue="name" value="{!a.wName}"></apex:column>   
+                <apex:column headerValue="age" value="{!a.wAge}"></apex:column>   
+            </apex:pageBlockTable>
+            <apex:commandbutton Value="Delete" action="{!del}"/>
+            <apex:commandButton value="Edit" action="{!edit}"/> 
+        </apex:pageBlock>
+      
+    </apex:form>
+</apex:page>

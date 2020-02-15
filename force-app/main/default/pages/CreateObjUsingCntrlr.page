@@ -1,0 +1,18 @@
+<apex:page controller="CraeteObjUsingCntrlr">
+     <apex:form >
+        <apex:commandButton value="Create" action="{!Create}"/>          
+        <apex:commandButton value="Save&New" action="{!saveNew}"/>          
+        <apex:commandButton value="refresh" action="{!refresh}"/>   
+        <apex:pageBlock title="Lead Object">
+            <apex:pageBlockSection columns="3">
+                <apex:inputField value="{!mylead.LastName}"/>
+            </apex:pageBlockSection>
+            <apex:pageBlockSection >
+                <apex:inputField value="{!mylead.Company}"/>
+            </apex:pageBlockSection>
+            <apex:pageBlockSection >
+                <apex:inputField value="{!mylead.Status}"/>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

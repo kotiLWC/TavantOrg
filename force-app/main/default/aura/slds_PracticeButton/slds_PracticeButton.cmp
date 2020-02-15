@@ -1,0 +1,4 @@
+<aura:component >
+    <lightning:button variant="brand" label="Submit" onclick="{! c.handleClick }" />
+    <lightning:button variant="brand" iconName="utility:download" iconPosition="left" onclick="{! c.handleClick }" />
+</aura:component>

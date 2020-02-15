@@ -1,0 +1,12 @@
+<aura:component >
+    <div>
+        <lightning:buttonIcon aura:id="articleOne" iconName="utility:list" variant="bare" alternativeText="Settings" iconClass="dark" 
+                              onclick="{! c.handleClick }"/>
+        
+        <div class="slds-show slds-p-around--medium" aura:id="articleOne">
+            section one is ready.section one is ready.section one is ready.
+            section one is ready.section one is ready.section one is ready.
+            section one is ready.section one is ready.section one is ready.
+        </div>
+    </div>
+</aura:component>

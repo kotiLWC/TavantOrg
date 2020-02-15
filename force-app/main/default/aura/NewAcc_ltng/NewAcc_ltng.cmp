@@ -1,0 +1,52 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" controller="PagingSortingController" >
+    <!--Start Modal New Account -->
+    <aura:attribute name="accObj" type="Account"  default="{'sobjectType': 'Account',
+                                                           'Name': '',
+                                                           'Rating': '',
+                                                           'Phone': ''
+                                                           }"/>
+    
+    <aura:attribute name="AccDet" type="Account"/>
+    <div class="slds-box">    
+        <div class="slds-text-align_center">New Account</div>
+        <div class="slds-form slds-form_stacked">
+            <div class="slds-form-element">
+                <div class="slds-form-element__control">
+                   <!-- <ui:inputText aura:id="AccName" value="{!v.accObj.Name}"/>-->
+                    <lightning:input type="Text" label="Name" name="Accountname" value="{!v.accObj.Name}" aura:id="AccName" required="true"/>
+                </div>
+            </div>
+            
+            <div class="slds-form-element">
+                <div class="slds-form-element__control">
+                    <lightning:select name="selectItem" label="Rating" value="{!v.accObj.Rating}" required="true" >
+                        <option value="Hot">Hot</option>
+                        <option value="Warm">Warm</option>
+                        <option value="Cold">Cold</option>
+                    </lightning:select>
+                </div>
+            </div>
+            
+            <div class="slds-form-element">
+                <div class="slds-form-element__control">
+                    <lightning:input type="tel" label="Phone"  name="tel" value="{!v.accObj.Phone}" required="true"/>
+                </div>
+            </div>
+            
+            <div class="slds-form-element">
+                <div class="slds-form-element__control">
+                    <div class="slds-button_brand">
+                        <lightning:button label="Save" onclick="{!c.saveAccount}"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+    
+    <div>
+      <aura:iteration items="{!v.AccDet}" var="obj">
+      {!obj.Name}, {!obj.Rating}, {!obj.Phone}
+  </aura:iteration>
+
+    </div>
+</aura:component>

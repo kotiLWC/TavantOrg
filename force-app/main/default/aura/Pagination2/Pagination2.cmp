@@ -1,0 +1,150 @@
+<aura:component controller="PagingSortingController">
+    <aura:attribute name="txtContact" type="String" description="Contact Name to be searched" /> 
+    <aura:attribute type="Account[]" name="allAccounts" access="PUBLIC"/>
+    <aura:attribute type="Account[]" name="currentList" access="PUBLIC"/>
+    <aura:attribute type="Integer" name="pageNumber" default="1" />
+    <aura:attribute type="Integer" name="maxPage" default="1" />
+    <aura:attribute type="String" name="sortField" />
+    <aura:attribute type="Boolean" name="sortAsc" />
+    <!--<aura:handler name="init" value="{!this}"	action="{!c.doInit}" />-->
+    <aura:attribute name="ValueOneisTrue" type="boolean" default="true"/>
+    <aura:attribute name="ValueTwoisTrue" type="boolean" default="false"/>
+    <aura:attribute name="ValueThreeisTrue" type="boolean" default="false"/>
+    <aura:attribute name="IsSpinner" type="Boolean"/>
+    <aura:handler name="change"	value="{!v.pageNumber}"	action="{!c.renderPage}" />
+    <aura:attribute name="editAccId" type="id"/>
+    <aura:attribute name="viewAccId" type="id"/>
+    <aura:attribute name="isEdit" type="boolean"/>
+    <aura:attribute name="isView" type="boolean"/>
+    
+    <div class="slds">
+        <aura:if isTrue="{!(v.ValueOneisTrue)}" >
+            <div class="slds-grid slds-wrap slds-grid--pull-padded">
+                <div class="slds-col slds-size--1-of-1">     
+                    <div class="lds-form--horizontal">
+                        <label class="slds-form-element__label" for="text-input-01">Account Name</label>
+                        <div class="slds-form-element__control"> 
+                            <ui:inputText aura:id="txtContactName" value="{!v.txtContact}" class="slds-input" placeholder="Text to search" />
+                        </div>
+                    </div> 
+                </div>
+                <div class="slds-col slds-size--1-of-1"> 
+                    <button class="slds-button slds-theme--alt-inverse slds-p-left--medium slds-p-right--medium" onclick="{!c.doInit}">Search</button>
+                    <div class="exampleHolder">
+                        <lightning:spinner aura:id="mySpinner" class="slds-hide"/>
+                    </div>
+                </div>
+            </div>
+        </aura:if>
+        <aura:if isTrue="{!(v.ValueTwoisTrue)}" >
+            <div>
+                <table class="slds-table slds-table--bordered slds-table--cell-buffer">
+                    <thead>
+                        <tr class="slds-text-title--caps">
+                            <th scope="col">
+                                <div onclick="{!c.sortByName}"
+                                     class="slds-truncate"
+                                     title="Account Name">
+                                    Account Name
+                                    <aura:if isTrue="{!v.sortField=='Name'}">
+                                        <span>
+                                            <aura:if isTrue="{!v.sortAsc}">
+                                                &#8593;
+                                                <aura:set attribute="else">
+                                                    &#8595;
+                                                </aura:set>
+                                            </aura:if>
+                                        </span>
+                                    </aura:if>
+                                </div>
+                            </th>
+                            <th scope="col">
+                                <div onclick="{!c.sortByIndustry}"
+                                     class="slds-truncate"
+                                     title="Account Name">
+                                    Industry
+                                    <aura:if isTrue="{!v.sortField=='Industry'}">
+                                        <span>
+                                            <aura:if isTrue="{!v.sortAsc}">
+                                                &#8593;
+                                                <aura:set attribute="else">
+                                                    &#8595;
+                                                </aura:set>
+                                            </aura:if>
+                                        </span>
+                                    </aura:if>
+                                </div>
+                            </th>
+                            <th scope="col">
+                                <div onclick="{!c.sortByAnnualRevenue}"
+                                     class="slds-truncate"
+                                     title="Account Name">
+                                    Annual Revenue
+                                    <aura:if isTrue="{!v.sortField=='AnnualRevenue'}">
+                                        <span>
+                                            <aura:if isTrue="{!v.sortAsc}">
+                                                &#8593;
+                                                <aura:set attribute="else">
+                                                    &#8595;
+                                                </aura:set>
+                                            </aura:if>
+                                        </span>
+                                    </aura:if>
+                                </div>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <aura:iteration items="{!v.currentList}"
+                                        var="record">
+                            
+                            <tr>
+                                <th data-label="Account Name">
+                                    <div class="slds-truncate" title="{!record.Name}">
+                                        <a href="javascript:void(0);">{!record.Name}</a>
+                                        
+                                    </div>
+                                </th>
+                                <th data-label="Industry">
+                                    <div class="slds-truncate" title="{!record.Industry}">
+                                        {!record.Industry}
+                                    </div>
+                                </th>
+                                <th data-label="Annual Revenue">
+                                    <div class="slds-truncate" title="{!record.AnnualRevenue}">
+                                        {!record.AnnualRevenue}
+                                    </div>
+                                </th>
+                                <th>
+                                    <button type="button" onclick="{!c.view}" id="{!record.Id}">View</button>&nbsp;&nbsp;
+                                    <button type="button" onclick="{!c.edit}" id="{!record.Id}">Edit</button>&nbsp;&nbsp;
+                                    <button type="button" onclick="{!c.delete}" id="{!record.Id}">Del</button>
+                                    
+                                </th>
+                            </tr>
+                            
+                        </aura:iteration>
+                        
+                    </tbody>
+                </table>
+                <c:Pagination1 currentPageNumber="{!v.pageNumber}" 
+                               maxPageNumber="{!v.maxPage}" /> 
+            </div>
+        </aura:if>
+        <aura:if isTrue="{!(v.ValueThreeisTrue)}">
+            <c:NewAcc_ltng />
+        </aura:if>
+    </div>
+    <aura:renderIf isTrue="{!v.isEdit}">
+        <force:recordEdit aura:id="edit" recordId="{!v.editAccId}"/>
+        <center>
+            <ui:button label="Save" press="{!c.save}"/>
+            <ui:button label="Cancel" press="{!c.cancel}"/>
+        </center>
+    </aura:renderIf>
+    
+    <aura:renderIf isTrue="{!v.isView}">
+        <force:recordView aura:id="view" recordId="{!v.viewAccId}"/>
+    </aura:renderIf>
+    
+</aura:component>

@@ -1,0 +1,16 @@
+<apex:page controller="AccountCntrl" tabStyle="Account"> 
+    <apex:form >
+	<apex:pageBlock title="account details">
+            <apex:pageMessages />
+            <apex:pageBlockSection >
+                <apex:inputField value="{!Account.name}"/>
+                <apex:inputField value="{!Account.phone}"/>
+                <apex:inputField value="{!Account.industry}"/>
+                <apex:inputField value="{!Account.isCheck__c}"/>
+            </apex:pageBlockSection>
+            <apex:pageBlockButtons location="bottom">
+                <apex:commandButton value="Save" action="{!save}"/>
+            </apex:pageBlockButtons>
+        </apex:pageBlock>
+        </apex:form>
+</apex:page>

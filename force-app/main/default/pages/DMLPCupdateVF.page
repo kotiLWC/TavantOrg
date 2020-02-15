@@ -1,0 +1,27 @@
+<apex:page controller="DMLPCupdate">
+    <apex:form >
+        <apex:commandButton value="update" action="{!change}"/> 
+        <apex:selectlist value="{!selected}" size="1">    
+            <apex:selectoptions value="{!option}" >
+            </apex:selectoptions>     
+        </apex:selectlist> 
+        <apex:pageBlock >
+            <apex:pageBlockTable value="{!lstAcc}" var="a">
+                <apex:column value="{!a.name}" headervalue="Name"/>        
+                <apex:column value="{!a.phone}" headervalue="phone"/>      
+                <apex:column value="{!a.industry}" headervalue="industry"/>   
+                <apex:column value="{!a.rating}" headervalue="rating"/> 
+                <apex:column headervalue="Contact name" >             
+                    <apex:repeat value="{!a.contacts}" var="b"> 
+                        {!b.lastname}<br/> 
+                    </apex:repeat>
+                </apex:column>
+                <apex:column headervalue="Contact Phone" >             
+                    <apex:repeat value="{!a.contacts}" var="b"> 
+                        {!b.Phone}<br/> 
+                    </apex:repeat>
+                </apex:column>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,40 @@
+<aura:component controller="AllContacts">
+	<aura:handler name="init" value="{!this}"	action="{!c.doInit}" />
+    <aura:attribute type="Contact[]" name="allContacts" />
+    <table class="slds-table slds-table--bordered">
+                <thead>
+                    <tr class="slds-text-heading--label">
+                        <th class="slds-cell-shrink"> 
+                            Contact Name
+                        </th> 
+                        <th class="slds-cell-shrink"> 
+                            Phone
+                        </th> 
+                        <th class="slds-cell-shrink"> 
+                            Email
+                        </th> 
+                        <th class="slds-cell-shrink"> 
+                            Account Name
+                        </th>  
+                    </tr>
+                </thead>
+                <tbody>
+                    <aura:iteration items="{!v.allContacts}" var="r">
+                        <tr class="slds-hint-parent">
+                            <td class="slds-cell-shrink" data-label="Select Row">
+                                {!r.Name}
+                            </td> 
+                            <td class="slds-cell-shrink" data-label="Select Row">
+                                {!r.Phone}
+                            </td> 
+                            <td class="slds-cell-shrink" data-label="Select Row">
+                                {!r.Email}
+                            </td>
+                            <td class="slds-cell-shrink" data-label="Select Row">
+                                {!r.Account.Name}
+                            </td> 
+                        </tr> 
+                    </aura:iteration> 
+                </tbody>
+            </table>
+</aura:component>

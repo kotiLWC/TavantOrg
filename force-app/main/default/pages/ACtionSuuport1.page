@@ -1,0 +1,18 @@
+<apex:page standardController="Account" extensions="ApexParamController" recordSetVar="accounts">  
+  <apex:form >
+    <apex:repeat value="{!accounts}" var="account">
+    <apex:inputCheckbox >
+      <apex:actionSupport event="onchange"
+                action="{!doActionSupport}"
+                reRender="selectedResultPanel">
+        <apex:param id="account" name="accountId" value="{!account.Id}"
+              assignTo="{!vfParam}"/>
+      </apex:actionSupport>
+    </apex:inputCheckbox>
+      {!account.Name}<br />
+    </apex:repeat>
+    <apex:outputPanel id="selectedResultPanel">
+      Selected Account : {!vfParam}
+    </apex:outputPanel>
+  </apex:form>
+</apex:page>

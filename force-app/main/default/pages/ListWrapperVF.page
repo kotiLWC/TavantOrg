@@ -1,0 +1,10 @@
+<apex:page controller="wrapperList">
+    <apex:form >        
+        <apex:pageblock >  
+            <apex:pageblocktable value="{!lw}" var="a">  
+                <apex:column headerValue="name" value="{!a.name}"></apex:column>   
+                <apex:column headerValue="age" value="{!a.age}"></apex:column>    
+            </apex:pageblocktable>       
+        </apex:pageblock>    
+    </apex:form>
+</apex:page>

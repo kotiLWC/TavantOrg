@@ -1,0 +1,13 @@
+<aura:component controller="QuickContactController" implements="force:lightningQuickActionWithoutHeader,force:hasRecordId">
+<aura:attribute name="account" type="Account" />
+
+<aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+
+<!-- Display a header with details about the account -->
+<div class="slds-page-header" role="banner">
+<p class="slds-text-heading--label">{!v.account.Name}</p>
+<h1 class="slds-page-header__title slds-m-right--small
+  slds-truncate slds-align-left">Create New Contact</h1>
+</div>
+
+</aura:component>

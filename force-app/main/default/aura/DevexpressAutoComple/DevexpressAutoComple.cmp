@@ -1,0 +1,6 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+<ltng:require scripts='/resource/JOGrid/pagtable/jquery.min.js,/resource/JOGrid/pagtable/jszip.min.js,/resource/JOGrid/pagtable/dx.all.js'
+                  styles='/resource/JOGrid/pagtable/dx.common.css,/resource/JOGrid/pagtable/dx.carmine.css,/resource/JOGrid/pagtable/dx.softblue.css'
+                  afterScriptsLoaded="{!c.scriptsLoaded}"/> 
+    <div id="autocompleteContainer"></div>
+</aura:component>

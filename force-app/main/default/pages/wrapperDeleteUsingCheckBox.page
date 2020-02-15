@@ -1,0 +1,14 @@
+<apex:page controller="ListWrapperWithDelete">
+     <apex:form >        
+        <apex:pageblock >  
+            <apex:pageblocktable value="{!lw}" var="a">
+                 <apex:column >     
+                <apex:inputCheckbox value="{!a.checkBox}"/>
+                </apex:column>
+                <apex:column headerValue="name" value="{!a.name}"></apex:column>   
+                <apex:column headerValue="age" value="{!a.age}"></apex:column>    
+            </apex:pageblocktable>       
+        </apex:pageblock> 
+          <apex:commandbutton Value="Delete" action="{!del}"></apex:commandbutton> 
+    </apex:form>
+</apex:page>

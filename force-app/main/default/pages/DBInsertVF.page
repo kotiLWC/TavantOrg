@@ -1,0 +1,14 @@
+<apex:page controller="DBInsert">
+    <apex:form >
+    <apex:pageBlock >
+          <apex:messages /> 
+        <apex:pageBlockSection >
+        	<apex:commandButton action="{!DBInsert}" value="DBInsert"/>
+        </apex:pageBlockSection>
+         <apex:pageBlockSection >
+        	SuccessIds===={!successIds};
+            ErrorIds===={!errorFieldss}; 
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+    </apex:form>
+</apex:page>

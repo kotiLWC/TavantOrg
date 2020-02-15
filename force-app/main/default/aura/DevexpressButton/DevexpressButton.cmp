@@ -1,0 +1,8 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+	<ltng:require scripts='/resource/JOGrid/pagtable/jquery.min.js,/resource/JOGrid/pagtable/jszip.min.js,/resource/JOGrid/pagtable/dx.all.js'
+                  styles='/resource/JOGrid/pagtable/dx.common.css,/resource/JOGrid/pagtable/dx.carmine.css,/resource/JOGrid/pagtable/dx.softblue.css'
+                  afterScriptsLoaded="{!c.scriptsLoaded}" />
+    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%)">
+    <div id="myButton"></div>
+  </div>
+</aura:component>

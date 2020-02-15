@@ -1,0 +1,4 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="global" >
+    <lightning:utilityBarAPI aura:id="utilitybar" />
+    <lightning:button label="Get Utility Info" onclick="{! c.getUtilityInfo }" />
+</aura:component>

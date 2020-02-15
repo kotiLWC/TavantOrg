@@ -1,0 +1,5 @@
+<aura:component >
+<lightning:button label="New Record" name="new" onclick="{!c.handleClick}"/>
+<lightning:button label="Edit" name="edit" onclick="{!c.handleClick}"/>
+<lightning:button label="Delete" name="delete" onclick="{!c.handleClick}"/>
+</aura:component>

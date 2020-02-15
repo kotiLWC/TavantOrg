@@ -1,0 +1,10 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <button class="slds-button slds-button_icon slds-button_icon-border-filled" aria-haspopup="true" title="Show More">
+         <lightning:icon iconName="utility:edit_form" size="large" alternativeText="Indicates approval"/>
+        <lightning:buttonMenu iconName="utility:edit_form" alternativeText="Configure" variant="bare" onselect="{!c.handleMenuSelect}" >
+            <lightning:menuItem label="JO Dashboard" value="JO Dashboard" />
+            <lightning:menuItem label="Permitting Dashboard" value="Permitting Dashboard"/>
+            <lightning:menuItem label="Paving Dashboard" value="Paving Dashboard" />
+        </lightning:buttonMenu>
+    </button>
+</aura:component>

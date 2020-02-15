@@ -1,0 +1,38 @@
+<apex:page controller="wrapperListAccount">
+    <apex:form >
+        <apex:outputPanel rendered="{!selectedCheck == false}">
+        <apex:pageBlock >
+            <apex:pageBlockTable value="{!wrappAccList}" var="w" id="test">
+                
+                <apex:column headerValue="Checkbox">
+                    <apex:inputCheckbox value="{!w.checked}" >
+                        <apex:actionSupport event="onclick" reRender="test"/>
+                    </apex:inputCheckbox>
+                </apex:column>
+                <apex:column headervalue="Name">
+                     <apex:outputtext value="{!w.acc.Name}"/>
+                </apex:column>
+                <apex:column headerValue="PhoneNumber">
+                    <apex:outputField value="{!w.acc.phone}" rendered="{!w.checked}"/>
+                </apex:column>
+            </apex:pageBlockTable>
+            <apex:pageBlockButtons >
+                <apex:commandButton value="Display!!" action="{!displayAcc}"/>
+            </apex:pageBlockButtons>
+        </apex:pageBlock>
+        </apex:outputPanel>
+        
+        <apex:outputPanel >
+           <apex:pageBlock rendered="{!selectedCheck == true}">
+               <apex:pageBlockTable value="{!conList}" var="cc">
+                   <apex:column headerValue="ContactName">
+                       <apex:outputfield value="{!cc.lastname}"/>
+                   </apex:column>
+                   <apex:column headerValue="AccountName"> 
+                       <apex:outputfield value="{!cc.accountid}"/>
+                   </apex:column>
+               </apex:pageBlockTable>
+            </apex:pageBlock>
+        </apex:outputPanel>
+    </apex:form>
+</apex:page>

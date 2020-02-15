@@ -1,0 +1,19 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+	<ltng:require scripts='/resource/JOGrid/pagtable/jquery.min.js,/resource/JOGrid/pagtable/jszip.min.js,/resource/JOGrid/pagtable/dx.all.js'
+                  styles='/resource/JOGrid/pagtable/dx.common.css,/resource/JOGrid/pagtable/dx.carmine.css,/resource/JOGrid/pagtable/dx.softblue.css'
+                  afterScriptsLoaded="{!c.scriptsLoaded}" /> 
+     <div class="demo-container">
+        <div class="form">
+            <div class="label">Custom size</div>
+            <div id="small-indicator"></div>
+            <div id="medium-indicator"></div>
+            <div id="large-indicator"></div>
+        
+            <div class="label">Custom image</div>
+            <div id="image-indicator"></div>
+        
+            <div class="label">Using with other widgets</div>
+            <div id="button"></div>
+        </div>
+    </div>
+</aura:component>

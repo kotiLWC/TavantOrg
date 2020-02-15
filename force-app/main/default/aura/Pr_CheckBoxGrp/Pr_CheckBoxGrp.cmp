@@ -1,0 +1,15 @@
+<aura:component>
+    <aura:attribute name="options" type="List" default="[
+    {'label': 'Ross', 'value': 'option1'},
+    {'label': 'Rachel', 'value': 'option2'},
+    ]"/>
+    <aura:attribute name="value" type="List" default="option1"/>
+    <lightning:checkboxGroup
+        aura:id="mygroup"
+        name="checkboxGroup"
+        label="Checkbox Group"
+        options="{! v.options }"
+        value="{! v.value }"
+        onchange="{! c.handleChange }"
+        required="true" />
+</aura:component>

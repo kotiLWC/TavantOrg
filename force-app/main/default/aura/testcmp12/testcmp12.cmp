@@ -1,0 +1,6 @@
+<aura:component >
+	<aura:attribute name="numbers" type="list" default="1,2,3,4,5"/>
+	 <aura:iteration items="{!v.numbers}" var="item">
+        <p> {!item}</p>
+   </aura:iteration>
+</aura:component>

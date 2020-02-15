@@ -1,0 +1,13 @@
+<apex:page controller="DynamicPageRef">
+    <apex:form >
+        <apex:commandButton action="{!CreatePage}" value="CreateAccount"/>
+        <apex:pageBlock >
+        <apex:pageBlockSection >
+            <apex:inputField value="{!acc.Name}"/>
+            <apex:inputField value="{!acc.Rating}"/>
+            <apex:inputField value="{!acc.Industry}"/>
+         </apex:pageBlockSection>
+        </apex:pageBlock>
+    
+    </apex:form>
+</apex:page>

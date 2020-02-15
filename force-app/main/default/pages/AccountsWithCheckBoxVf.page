@@ -1,0 +1,28 @@
+<apex:page controller="AccountsWithCheckBox">
+    <apex:form >
+        <apex:inputText value="{!find}"/>
+        <apex:commandButton action="{!search}" value="Search"/>
+            <apex:outputPanel id="thePanel"  title="one" rendered="{!firstPanel}"> 
+                <apex:pageBlock title="Total Details" >
+					<apex:commandButton action="{!DeleteRec}" value="Del"/>     
+                    <apex:pageBlockTable value="{!lstWrap}" var="w">
+                        <apex:column ><apex:inputCheckbox value="{!w.selectCheck}"/> 
+                        </apex:column>
+                        <apex:column value="{!w.Name}"/>
+                        <apex:column value="{!w.Rating}"/>
+                        <apex:column value="{!w.Industry}"/>
+                    </apex:pageBlockTable>
+                </apex:pageBlock>
+            </apex:outputPanel> 
+            <apex:outputPanel id="thePanel1"  title="two" rendered="{!secondPanel}"> 
+                <apex:pageBlock title="Seach Details">
+                    <apex:pageBlockTable value="{!SearchaccLST}" var="w">
+                        <apex:column value="{!w.Name}"/>
+                        <apex:column value="{!w.Rating}"/>
+                        <apex:column value="{!w.Industry}"/>
+                    </apex:pageBlockTable>
+                </apex:pageBlock>
+            </apex:outputPanel> 
+            
+        </apex:form>
+    </apex:page>

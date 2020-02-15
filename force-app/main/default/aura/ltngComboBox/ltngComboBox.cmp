@@ -1,0 +1,9 @@
+<aura:component >
+    <aura:attribute name="statusOptions" type="List" default="[]"/>
+    <aura:handler name="init" value="{! this }" action="{! c.loadOptions }"/>
+    <lightning:combobox aura:id="selectItem" name="status" label="Status"
+                        placeholder="Choose Status"
+                        value="new"
+                        onchange="{!c.handleOptionSelected}"
+                        options="{!v.statusOptions}"/> 
+</aura:component>

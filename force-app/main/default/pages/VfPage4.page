@@ -1,0 +1,10 @@
+<apex:page controller="Apex4">
+     <apex:form > 
+         <apex:commandbutton value="M" action="{!m1}"/><br/>  
+         <apex:outputText value="{!Aval}"> </apex:outputText> <br/>  
+               <apex:outputText value="{!Bval}"></apex:outputText> <br/>  
+               <apex:outputText value="{!Cval}"></apex:outputText><br/>     
+               <apex:outputText value="{!Dval}"></apex:outputText>   
+         
+    </apex:form>
+</apex:page>

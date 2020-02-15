@@ -1,0 +1,10 @@
+<aura:component controller="DevExpressAccountController">
+    <ltng:require scripts='/resource/JOGrid/pagtable/jquery.min.js,/resource/JOGrid/pagtable/jszip.min.js,/resource/JOGrid/pagtable/dx.all.js'
+                  styles='/resource/JOGrid/pagtable/dx.common.css,/resource/JOGrid/pagtable/dx.carmine.css,/resource/JOGrid/pagtable/dx.softblue.css'
+                  afterScriptsLoaded="{!c.scriptsLoaded}" />
+    
+    <aura:attribute name="ListOfAccounts" type="Account[]"/>
+    <div class="demo-container">
+        <div id="gridContainer1"></div>
+    </div>
+</aura:component>

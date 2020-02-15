@@ -1,0 +1,23 @@
+<aura:component >
+<aura:attribute name="first" type="String" default="John"/>
+<aura:attribute name="last" type="String" default="Doe"/>
+
+<ui:inputText label="First Name" value="{!v.first}" updateOn="keyup"/>
+<ui:inputText label="Last Name" value="{!v.last}" updateOn="keyup"/>
+
+<!-- Returns "John Doe" -->
+<ui:outputText value="{!v.first +' '+ v.last}"/>
+
+
+
+
+<aura:attribute name="number1" type="integer" default="1"/>
+<aura:attribute name="number2" type="integer" default="2"/>
+
+<ui:inputNumber label="Number 1" value="{!v.number1}" updateOn="keyup" />
+<ui:inputNumber label="Number 2" value="{!v.number2}"  updateOn="keyup" />
+
+<!-- Adds the numbers and returns the sum -->
+<ui:outputNumber value="{!(v.number1 * 10) + (v.number2 * 15)}"/>
+
+</aura:component>

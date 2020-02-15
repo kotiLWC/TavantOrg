@@ -1,0 +1,57 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" controller="TestUserController" >
+    <aura:attribute name="users" type="TestUser__c[]"/>
+     <aura:attribute name="newuser" type="TestUser__c"
+                     default="{ 'sobjectType': 'TestUser__c',
+                     'Name': '',
+                     'LastName__c': '',
+                     'Email__c':'abc@sfdc.com',
+                     'Phone__c':'1234567',
+                     'DOB__c':'1940-01-01',
+                   }"/>
+
+    <div class="slds-grid slds-wrap">
+        <div class="slds-col slds-size_12-of-12">
+                <div class="slds-form">
+                    <div class="slds-form-element slds-form-element_stacked">
+                        <h2 class="header">Profile Details</h2>
+                        <div class="slds-form-element__control">
+                            <lightning:input aura:id="field" label="First name" name="firstname" placeholder="First name" required="true" value="{!v.newuser.Name}"/>
+                        </div>
+                    </div>
+                    
+                    <div class="slds-form-element slds-form-element_stacked">
+                        <div class="slds-form-element__control">
+                            <lightning:input aura:id="field" label="Last name" name="lastname" placeholder="Last name" required="true" value="{!v.newuser.LastName__c}" />
+                        </div>
+                    </div>
+                    <div class="slds-form-element slds-form-element_stacked">
+                        <div class="slds-form-element__control">  
+                            <lightning:input type="email" name="email3" placeholder="youraddress@company.com" label="Email Address" value="{!v.newuser.Email__c}"/>
+                        </div>
+                    </div>
+                    <div class="slds-form-element slds-form-element_stacked">
+                        <div class="slds-form-element__control">
+                            <lightning:input type="tel" label="Phone Number" name="phone2" placeholder="areacode-phone" value="{!v.newuser.Phone__c}"/>
+                        </div>
+                    </div>
+                    <div class="slds-form-element slds-form-element_stacked">
+                        <div class="slds-form-element__control">
+                            <lightning:input type="date" name="DateofBirth" label="Date Of Birth" value="{!v.newuser.DOB__c}" min="1940-01-01" max="2100-01-01" />
+                        </div>
+                    </div>
+                    <!--<div class="slds-form-element slds-form-element_stacked">
+                        <div class="slds-form-element__control">
+                            <lightning:input type="color" name="color" label="Favorite Color" value="{!v.newuser.FavouriteColor__c}"/>
+                        </div>
+                    </div>-->
+                    <div class="slds-form-element slds-form-element_stacked">
+                        <div class="slds-form-element__control slds-align_absolute-center" style="height: 5rem;">
+                            <lightning:button class="slds-button slds-button_brand" aura:id="Submit" type="Submit" label="Submit" onclick="{! c.onClick }"/>
+                            <lightning:button class="slds-button slds-button_brand" aura:id="Cancel" type="Cancel" label="Cancel" onclick="{! c.onClick }"/>
+                            
+                        </div>
+                    </div>
+                </div> 
+            </div>
+        </div>
+</aura:component>

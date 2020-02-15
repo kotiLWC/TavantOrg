@@ -1,0 +1,7 @@
+<aura:component>
+    <lightning:buttonMenu iconName="utility:settings" alternativeText="Settings" onselect="{! c.handleMenuSelect }">
+    <lightning:menuItem label="Font" value="12" />
+    <lightning:menuItem label="Size" value="23"/>
+    <lightning:menuItem label="Format" value="34" />
+</lightning:buttonMenu>
+</aura:component>

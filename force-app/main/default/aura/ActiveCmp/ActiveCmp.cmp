@@ -1,0 +1,6 @@
+<aura:component >
+  <lightning:tabset >
+    <lightning:tab onactive="{! c.handleActive }" label="Tab 1" id="tab1" />
+    <lightning:tab onactive="{! c.handleActive }" label="Tab 2" id="tab2" />
+  </lightning:tabset>
+</aura:component>

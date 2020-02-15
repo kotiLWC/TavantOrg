@@ -1,0 +1,4 @@
+<aura:component >
+<lightning:input type="number" name="percentVal" label="Enter a percentage value" formatter="percent" step="0.01" />
+<lightning:input type="number" name="currencyVal" label="Enter a dollar amount" formatter="currency" step="0.01" />
+</aura:component>

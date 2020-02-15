@@ -1,0 +1,28 @@
+<aura:component>
+    <lightning:dynamicIcon type="ellie" alternativeText="Your calculation is running."/>
+    <div class="slds-icon-eq slds-is-animated" title="Description of the icon when needed">
+        <div class="slds-icon-eq__bar"></div>
+        <div class="slds-icon-eq__bar"></div>
+        <div class="slds-icon-eq__bar"></div>
+    </div>
+    <div>
+        <button class="slds-button slds-icon-waffle_container" title="Description of the icon when needed">
+            <span class="slds-icon-waffle">
+                <span class="slds-r1"></span>
+                <span class="slds-r2"></span>
+                <span class="slds-r3"></span>
+                <span class="slds-r4"></span>
+                <span class="slds-r5"></span>
+                <span class="slds-r6"></span>
+                <span class="slds-r7"></span>
+                <span class="slds-r8"></span>
+                <span class="slds-r9"></span>
+                <span class="slds-r10"></span>
+                <span class="slds-r11"></span>
+                <span class="slds-r12"></span>
+            </span>
+            <span class="slds-assistive-text">Open App Launcher</span>
+        </button>
+    </div>
+    
+</aura:component>

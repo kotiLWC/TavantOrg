@@ -1,0 +1,12 @@
+<apex:page controller="listOfSumRecCntrl">
+    <apex:form >
+    <apex:pageBlock >
+        <apex:commandButton action="{!SumRecords}" value="SumRecords"/>
+        <br/>
+        Sum:::<apex:outputText value="{!Sum}"></apex:outputText><br/>
+        MAX:::<apex:outputText value="{!MAX}"></apex:outputText><br/>
+        MIN:::<apex:outputText value="{!Min}"></apex:outputText>
+
+    </apex:pageBlock>
+    </apex:form>
+</apex:page>

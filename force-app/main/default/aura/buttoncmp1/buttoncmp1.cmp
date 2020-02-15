@@ -1,0 +1,9 @@
+<aura:component >
+    <aura:attribute name="attr1" type="boolean" default="true"/>
+    <aura:attribute name="attr2" type="boolean" default="true"/>
+    <aura:attribute name="attr3" type="boolean" default="true"/>
+    <lightning:button variant="brand" label="Download1" iconName="utility:download" disabled="{!v.attr1}" onclick="{! c.handleClick }" />
+    <lightning:button variant="brand" label="Download2" iconName="utility:download" disabled="{!v.attr2}" onclick="{! c.handleClick }" />
+    <lightning:button variant="brand" label="Download3" iconName="utility:download" disabled="{!v.attr3}" onclick="{! c.handleClick }" />
+    
+</aura:component>
